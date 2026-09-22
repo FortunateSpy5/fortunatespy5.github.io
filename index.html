@@ -154,7 +154,7 @@
           I'm <span class="text-white font-medium">Soumotanu Mazumdar</span>. I build at the intersection of modern cloud data warehousing (<strong class="text-sky-400 font-semibold">Snowflake</strong>) and autonomous generative AI systems (<strong class="text-purple-300 font-semibold">Google Gemini & Vertex AI</strong>). 
         </p>
         <p class="text-sm sm:text-base text-slate-400 leading-relaxed">
-          My work spans architecting modular data pipelines, developing autonomous reasoning agents with grounded memory, and designing versatile systems across computer vision and real-time streaming.
+          My work spans architecting modular data pipelines, developing autonomous reasoning agents with grounded memory, and designing high-performance machine learning and computer vision systems.
         </p>
       </div>
 
@@ -186,8 +186,8 @@
         <div class="flex items-center gap-1 bg-slate-900/90 p-1 rounded-lg border border-slate-800 text-xs font-mono">
           <button onclick="filterProjects('all')" class="tab-btn active px-2.5 py-1 rounded bg-slate-800 text-white transition-colors" data-filter="all">All</button>
           <button onclick="filterProjects('genai')" class="tab-btn px-2.5 py-1 rounded text-slate-400 hover:text-white transition-colors" data-filter="genai">GenAI & Agents</button>
-          <button onclick="filterProjects('vision')" class="tab-btn px-2.5 py-1 rounded text-slate-400 hover:text-white transition-colors" data-filter="vision">Vision & ML</button>
-          <button onclick="filterProjects('systems')" class="tab-btn px-2.5 py-1 rounded text-slate-400 hover:text-white transition-colors" data-filter="systems">Systems</button>
+          <button onclick="filterProjects('vision')" class="tab-btn px-2.5 py-1 rounded text-slate-400 hover:text-white transition-colors" data-filter="vision">Vision & Deep Learning</button>
+          <button onclick="filterProjects('algorithms')" class="tab-btn px-2.5 py-1 rounded text-slate-400 hover:text-white transition-colors" data-filter="algorithms">Algorithms & AI</button>
         </div>
       </div>
 
@@ -240,11 +240,41 @@
           </div>
         </div>
 
-        <!-- CARD 2: Sign Language Detection -->
+        <!-- CARD 2: Real-Time Object Tracking with YOLOv5 & DeepSORT (Span 1 col on desktop) -->
         <div class="project-item vision bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="vision">
           <div class="space-y-3">
             <div class="flex items-start justify-between gap-3">
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/25">COMPUTER VISION</span>
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 border border-sky-500/25">COMPUTER VISION</span>
+              <a href="https://github.com/FortunateSpy5/object-tracking-yolov5" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Source">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+
+            <h4 class="text-base font-bold text-white">Real-Time Object Tracking with YOLOv5 & DeepSORT</h4>
+            
+            <p class="text-xs text-slate-400 leading-relaxed">
+              High-throughput tracking pipeline combining YOLOv5m object detection with DeepSORT and OSNet ReID for persistent trajectory tracking across heavy crowd occlusions on the MOT20 benchmark. Features 8D Kalman state estimation and cascaded cosine matching.
+            </p>
+
+            <div class="font-mono text-[11px] text-slate-400 flex items-center gap-3 pt-1">
+              <span class="text-emerald-300 flex items-center gap-1">⚡ MOT20 Benchmark</span>
+              <span>• PyTorch FP16</span>
+            </div>
+          </div>
+
+          <div class="pt-4 mt-3 border-t border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px] text-slate-300">
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">YOLOv5m</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">DeepSORT</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">PyTorch</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">Kalman Filter</span>
+          </div>
+        </div>
+
+        <!-- CARD 3: Sign Language Detection -->
+        <div class="project-item vision bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="vision">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between gap-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-300 border border-emerald-500/25">POSE ESTIMATION</span>
               <a href="https://github.com/FortunateSpy5/sign-language-detection" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Source">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
               </a>
@@ -269,56 +299,8 @@
           </div>
         </div>
 
-        <!-- CARD 3: Digit Recognizer -->
-        <div class="project-item vision bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="vision">
-          <div class="space-y-3">
-            <div class="flex items-start justify-between gap-3">
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-sky-500/15 text-sky-300 border border-sky-500/25">CNN & PYGAME</span>
-              <a href="https://github.com/FortunateSpy5/digit-recognizer" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Source">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
-            </div>
-
-            <h4 class="text-base font-bold text-white">Interactive Digit Recognizer Canvas</h4>
-            
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Interactive drawing surface built in Pygame paired with a 99.65% test accuracy Convolutional Neural Network trained on MNIST. Converts user-drawn raster sketches to normalized 28×28 tensor matrices for sub-millisecond inference.
-            </p>
-          </div>
-
-          <div class="pt-4 mt-3 border-t border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px] text-slate-300">
-            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">CNN (99.65%)</span>
-            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">TensorFlow</span>
-            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">Pygame</span>
-          </div>
-        </div>
-
-        <!-- CARD 4: Live Video Streaming -->
-        <div class="project-item systems bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="systems">
-          <div class="space-y-3">
-            <div class="flex items-start justify-between gap-3">
-              <span class="text-xs font-mono px-2 py-0.5 rounded bg-blue-500/15 text-blue-300 border border-blue-500/25">FULL-STACK & RTMP</span>
-              <a href="https://github.com/FortunateSpy5/streaming-app-reactjs" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Source">
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
-              </a>
-            </div>
-
-            <h4 class="text-base font-bold text-white">Live Video Streaming Platform</h4>
-            
-            <p class="text-xs text-slate-400 leading-relaxed">
-              Live broadcast client and custom media server architecture. Uses React and Redux for stream management alongside Node-Media-Server for ingesting raw RTMP video feeds from OBS Studio with stream authorization keys.
-            </p>
-          </div>
-
-          <div class="pt-4 mt-3 border-t border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px] text-slate-300">
-            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">React & Redux</span>
-            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">RTMP Media Server</span>
-            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">OBS</span>
-          </div>
-        </div>
-
-        <!-- CARD 5: Flappy Bird AI -->
-        <div class="project-item genai vision bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="genai">
+        <!-- CARD 4: Flappy Bird AI -->
+        <div class="project-item algorithms bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="algorithms">
           <div class="space-y-3">
             <div class="flex items-start justify-between gap-3">
               <span class="text-xs font-mono px-2 py-0.5 rounded bg-amber-500/15 text-amber-300 border border-amber-500/25">NEUROEVOLUTION</span>
@@ -337,6 +319,30 @@
           <div class="pt-4 mt-3 border-t border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px] text-slate-300">
             <span class="px-1.5 py-0.5 rounded bg-slate-800/80">Genetic Algorithms</span>
             <span class="px-1.5 py-0.5 rounded bg-slate-800/80">Neural Nets</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">Pygame</span>
+          </div>
+        </div>
+
+        <!-- CARD 5: Digit Recognizer -->
+        <div class="project-item vision bento-card rounded-2xl p-6 flex flex-col justify-between" data-category="vision">
+          <div class="space-y-3">
+            <div class="flex items-start justify-between gap-3">
+              <span class="text-xs font-mono px-2 py-0.5 rounded bg-purple-500/15 text-purple-300 border border-purple-500/25">DEEP LEARNING</span>
+              <a href="https://github.com/FortunateSpy5/digit-recognizer" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Source">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+
+            <h4 class="text-base font-bold text-white">Interactive Digit Recognizer Canvas</h4>
+            
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Interactive drawing surface built in Pygame paired with a 99.65% test accuracy Convolutional Neural Network trained on MNIST. Converts user-drawn raster sketches to normalized 28×28 tensor matrices for sub-millisecond inference.
+            </p>
+          </div>
+
+          <div class="pt-4 mt-3 border-t border-slate-800/60 flex flex-wrap gap-1 font-mono text-[10px] text-slate-300">
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">CNN (99.65%)</span>
+            <span class="px-1.5 py-0.5 rounded bg-slate-800/80">TensorFlow</span>
             <span class="px-1.5 py-0.5 rounded bg-slate-800/80">Pygame</span>
           </div>
         </div>
@@ -425,23 +431,23 @@
           <ul class="text-xs font-mono space-y-1.5 text-slate-300">
             <li>Python (3.10+)</li>
             <li>SQL (Snowflake / ANSI)</li>
-            <li>TypeScript / JS</li>
             <li>GDScript (Godot)</li>
+            <li>Bash / Shell</li>
             <li>C++</li>
           </ul>
         </div>
 
-        <!-- Systems & Web -->
+        <!-- DataOps & Systems -->
         <div class="bento-card rounded-xl p-5 space-y-3">
           <div class="text-xs font-mono font-semibold text-emerald-400 flex items-center gap-1.5">
-            <span>⚡</span> Systems & Web
+            <span>⚡</span> DataOps & Systems
           </div>
           <ul class="text-xs font-mono space-y-1.5 text-slate-300">
-            <li>FastAPI / Node.js</li>
-            <li>React & Redux</li>
             <li>GitHub Actions CI/CD</li>
             <li>Docker & Linux</li>
-            <li>OBS & RTMP Protocol</li>
+            <li>FastAPI Microservices</li>
+            <li>Data Quality & Testing</li>
+            <li>Git Workflows</li>
           </ul>
         </div>
       </div>
