@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soumotanu Mazumdar | Data Engineer & GenAI Builder</title>
+  <meta name="description" content="Portfolio of Soumotanu Mazumdar (FortunateSpy5) - Data Engineer & GenAI Specialist focusing on Snowflake, Cloud Warehousing, and Autonomous Agents." />
+  <meta property="og:title" content="Soumotanu Mazumdar | Data Engineer & GenAI Builder" />
+  <meta property="og:description" content="Specializing in Snowflake, Cloud Data Platforms, and Autonomous Agentic AI." />
+  <meta property="og:url" content="https://fortunatespy5.github.io" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❄️</text></svg>">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              400: '#38bdf8',
+              500: '#0ea5e9',
+              600: '#0284c7',
+              700: '#0369a1',
+            },
+            snowflake: '#29B5E8',
+            gemini: '#8E75C2'
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .mono {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .glass-card {
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.15);
+    }
+    .glow-bg {
+      background: radial-gradient(circle at 50% 0%, rgba(14, 165, 233, 0.15) 0%, rgba(142, 117, 194, 0.08) 40%, rgba(10, 15, 29, 0) 70%);
+    }
+  </style>
+</head>
+<body class="bg-[#0b0f19] text-slate-100 min-h-screen selection:bg-sky-500 selection:text-white">
+
+  <!-- Glow Background Effect -->
+  <div class="fixed inset-0 pointer-events-none glow-bg z-0"></div>
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-[#0b0f19]/80 border-b border-slate-800/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2 group">
+        <span class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center font-bold text-white shadow-lg shadow-sky-500/20 group-hover:scale-105 transition-transform">
+          SM
+        </span>
+        <span class="font-semibold text-lg tracking-tight text-white group-hover:text-sky-400 transition-colors">
+          Soumotanu<span class="text-sky-400">.dev</span>
+        </span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-sky-400 transition-colors">About</a>
+        <a href="#competencies" class="hover:text-sky-400 transition-colors">Focus</a>
+        <a href="#projects" class="hover:text-sky-400 transition-colors">Projects</a>
+        <a href="#stack" class="hover:text-sky-400 transition-colors">Stack</a>
+        <a href="#contact" class="hover:text-sky-400 transition-colors">Contact</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="https://github.com/FortunateSpy5" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-white transition-colors" title="GitHub Profile">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/soumotanu/" target="_blank" rel="noopener noreferrer" class="p-2 text-slate-400 hover:text-[#0077B5] transition-colors" title="LinkedIn Profile">
+          <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-4 py-1.5 text-xs font-semibold rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 transition-all shadow-md shadow-sky-500/20">
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main class="relative z-10">
+    <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16 md:pt-28 md:pb-24">
+      <div class="max-w-3xl">
+        <!-- Status Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          Data Engineer & GenAI Builder
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight sm:leading-none mb-6">
+          Engineering Scalable Data Architectures & <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 via-indigo-300 to-purple-400">Autonomous GenAI Systems.</span>
+        </h1>
+
+        <p class="text-lg sm:text-xl text-slate-300 leading-relaxed mb-8">
+          Hi, I'm <strong class="text-white font-semibold">Soumotanu Mazumdar</strong> (<span class="mono text-sky-400 font-medium">@FortunateSpy5</span>). I specialize in cloud data platforms with <strong class="text-white">Snowflake</strong>, high-performance data pipelines, and multi-modal <strong class="text-white">Generative AI agents</strong> powered by Google Gemini & Vertex AI.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-wrap items-center gap-4">
+          <a href="#projects" class="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-indigo-600 hover:from-sky-400 hover:to-indigo-500 text-white font-semibold text-sm shadow-lg shadow-sky-500/25 transition-all flex items-center gap-2">
+            <span>Explore Featured Projects</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/soumotanu/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800/80 hover:bg-slate-700/80 text-slate-200 font-semibold text-sm border border-slate-700 transition-all flex items-center gap-2">
+            <span>Connect on LinkedIn</span>
+            <svg class="w-4 h-4 text-[#0077B5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Competencies -->
+    <section id="competencies" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/60">
+      <div class="mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Core Competencies</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Architecting End-to-End Solutions</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: Snowflake & Data Engineering -->
+        <div class="glass-card rounded-2xl p-7 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center text-2xl mb-5">
+            ❄️
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Snowflake & Cloud Data Platforms</h4>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Architecting scalable cloud warehousing architectures, data lakes, dimensional modeling, dynamic tables, and optimized SQL pipelines for analytical workflows.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs mono text-sky-300">
+            <span class="px-2 py-0.5 rounded bg-sky-950/60 border border-sky-800/40">Snowflake</span>
+            <span class="px-2 py-0.5 rounded bg-sky-950/60 border border-sky-800/40">ELT Pipelines</span>
+            <span class="px-2 py-0.5 rounded bg-sky-950/60 border border-sky-800/40">Data Modeling</span>
+          </div>
+        </div>
+
+        <!-- Card 2: GenAI & Autonomous Agents -->
+        <div class="glass-card rounded-2xl p-7 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-2xl mb-5">
+            🧠
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Generative AI & Agentic Systems</h4>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Designing production-grade multi-agent architectures, persistent memory banking, Vertex AI Reasoning Engine integration, RAG grounding, and multi-modal Gemini workflows.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs mono text-purple-300">
+            <span class="px-2 py-0.5 rounded bg-purple-950/60 border border-purple-800/40">Google Gemini</span>
+            <span class="px-2 py-0.5 rounded bg-purple-950/60 border border-purple-800/40">Vertex AI RAG</span>
+            <span class="px-2 py-0.5 rounded bg-purple-950/60 border border-purple-800/40">ADK Agents</span>
+          </div>
+        </div>
+
+        <!-- Card 3: Full-Stack & Creative Engineering -->
+        <div class="glass-card rounded-2xl p-7 transition-all">
+          <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-2xl mb-5">
+            ⚡
+          </div>
+          <h4 class="text-lg font-bold text-white mb-2">Full-Stack & Systems Versatility</h4>
+          <p class="text-sm text-slate-400 leading-relaxed mb-4">
+            Developing responsive React interfaces, high-throughput media servers (RTMP/OBS), real-time computer vision (OpenCV/MediaPipe), and state machines with Godot Engine.
+          </p>
+          <div class="flex flex-wrap gap-1.5 text-xs mono text-indigo-300">
+            <span class="px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-800/40">React</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-800/40">FastAPI</span>
+            <span class="px-2 py-0.5 rounded bg-indigo-950/60 border border-indigo-800/40">Computer Vision</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Grid -->
+    <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/60">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <h2 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Portfolio Spotlight</h2>
+          <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Featured Projects</h3>
+        </div>
+        <p class="text-sm text-slate-400 mt-2 md:mt-0">
+          Selected high-impact implementations across GenAI, Vision, and Systems.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Project 1: Sprout -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-purple-500/10 text-purple-300 border border-purple-500/20">
+                GenAI & Autonomous Agents
+              </span>
+              <a href="https://github.com/FortunateSpy5/buildwithgemini-sprout-plant-care" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Repository">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              Sprout — Smart Plant Care Concierge
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Autonomous botanical assistant built with Google ADK, Vertex AI Reasoning Engine, RAG Corpus grounding, Firestore, and A2UI streaming rich interface components. Includes live weather tools and multi-modal generation.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Vertex AI</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Gemini</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">RAG</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">FastAPI</span>
+          </div>
+        </div>
+
+        <!-- Project 2: Sign Language Detection -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                Computer Vision
+              </span>
+              <a href="https://github.com/FortunateSpy5/sign-language-detection" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Repository">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              Sign Language & Hand Pose Vision
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Real-time computer vision pipeline utilizing MediaPipe 3D landmark extraction and OpenCV to track hand articulations and classify sign language alphabet poses with ANN and CNN models.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">MediaPipe</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">OpenCV</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">TensorFlow</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Python</span>
+          </div>
+        </div>
+
+        <!-- Project 3: Digit Recognizer -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-sky-500/10 text-sky-300 border border-sky-500/20">
+                Deep Learning & GUI
+              </span>
+              <a href="https://github.com/FortunateSpy5/digit-recognizer" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Repository">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              Interactive Digit Recognizer Canvas
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Interactive Pygame drawing application featuring a custom 99.65% accuracy Convolutional Neural Network (CNN) trained on MNIST, executing real-time matrix pre-processing and dynamic digit inference.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">CNN</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">TensorFlow</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Pygame</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">NumPy</span>
+          </div>
+        </div>
+
+        <!-- Project 4: Live Video Streaming App -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                Full-Stack Systems
+              </span>
+              <a href="https://github.com/FortunateSpy5/streaming-app-reactjs" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Repository">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              Live Video Streaming Platform
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Complete broadcasting client and server architecture supporting live RTMP video ingestion from OBS Studio, stream authentication keys, and synchronized multi-user video feeds.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">React</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Redux</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Node-Media-Server</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">RTMP</span>
+          </div>
+        </div>
+
+        <!-- Project 5: Flappy Bird AI -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                Evolutionary AI
+              </span>
+              <a href="https://github.com/FortunateSpy5/flappy-bird-ai" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Repository">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              Neuroevolution Flappy Bird AI
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Autonomous gameplay agent leveraging genetic algorithms to evolve neural networks across generations. Features live visual simulation and headless accelerated training modes up to unlimited FPS.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Genetic Algorithms</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Neuroevolution</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Pygame</span>
+          </div>
+        </div>
+
+        <!-- Project 6: ML Algorithm Studio -->
+        <div class="glass-card rounded-2xl p-6 flex flex-col justify-between transition-all group">
+          <div>
+            <div class="flex items-center justify-between mb-4">
+              <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-rose-500/10 text-rose-300 border border-rose-500/20">
+                Machine Learning
+              </span>
+              <a href="https://github.com/FortunateSpy5/machine-learning-tkinter" target="_blank" rel="noopener noreferrer" class="text-slate-400 hover:text-white transition-colors" title="View Repository">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+              </a>
+            </div>
+            <h4 class="text-lg font-bold text-white group-hover:text-sky-400 transition-colors mb-2">
+              Machine Learning Algorithm Studio
+            </h4>
+            <p class="text-xs text-slate-400 leading-relaxed mb-4">
+              Interactive desktop application built with Python and Scikit-Learn allowing users to import custom datasets, configure train/test splits, and train/evaluate Linear Regression, Logistic Regression, Decision Trees, and Random Forests.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-slate-800/80 flex flex-wrap gap-1.5 text-[11px] mono text-slate-400">
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Scikit-Learn</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Tkinter</span>
+            <span class="px-2 py-0.5 rounded bg-slate-800/60">Pandas</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Tech Stack Matrix -->
+    <section id="stack" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 border-t border-slate-800/60">
+      <div class="mb-12">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-400 mb-2">Technical Competency</h2>
+        <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">Tech Stack & Ecosystem</h3>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Col 1 -->
+        <div class="glass-card rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+            <span class="text-sky-400">❄️</span> Data & Cloud
+          </h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Snowflake Data Cloud</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> dbt (Data Build Tool)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Advanced SQL & Modeling</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> Google Cloud Platform</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-sky-400"></span> PostgreSQL / Firestore</li>
+          </ul>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="glass-card rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+            <span class="text-purple-400">🧠</span> GenAI & ML
+          </h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Google Gemini API & ADK</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> Vertex AI Reasoning Engine</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> RAG Grounding Pipelines</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> PyTorch & Transformers</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-purple-400"></span> OpenCV & MediaPipe</li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="glass-card rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+            <span class="text-indigo-400">💻</span> Languages
+          </h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> Python (3.10+)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> SQL (ANSI / Snowflake)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> TypeScript / JavaScript</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> GDScript (Godot)</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span> C++ / HTML5 / CSS3</li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="glass-card rounded-2xl p-6">
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
+            <span class="text-emerald-400">🛠️</span> Web & DevOps
+          </h4>
+          <ul class="space-y-2.5 text-xs text-slate-300">
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> React / Redux / Next.js</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> FastAPI / Node.js</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Docker / Linux</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Git / GitHub Actions CI/CD</li>
+            <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> TailwindCSS / Webpack</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 border-t border-slate-800/60">
+      <div class="glass-card rounded-3xl p-8 sm:p-12 text-center max-w-2xl mx-auto relative overflow-hidden">
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-sky-500/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+        <h3 class="text-3xl font-extrabold text-white mb-3">Let's Connect & Collaborate</h3>
+        <p class="text-sm text-slate-300 mb-8 leading-relaxed">
+          Open to engineering discussions, data platform architectures, generative AI collaborations, and technical opportunities.
+        </p>
+
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="mailto:msoumotanu@gmail.com" class="px-6 py-3 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-semibold text-sm transition-all shadow-lg shadow-sky-500/20 flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <span>msoumotanu@gmail.com</span>
+          </a>
+          <a href="https://www.linkedin.com/in/soumotanu/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-all flex items-center gap-2">
+            <span>LinkedIn Profile</span>
+            <svg class="w-4 h-4 text-[#0077B5]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+          <a href="https://github.com/FortunateSpy5" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-semibold text-sm border border-slate-700 transition-all flex items-center gap-2">
+            <span>GitHub (@FortunateSpy5)</span>
+          </a>
+        </div>
+      </div>
+
+      <footer class="mt-16 text-center text-xs text-slate-500">
+        <p>© 2026 Soumotanu Mazumdar. Hosted with GitHub Pages.</p>
+      </footer>
+    </section>
+  </main>
+
+</body>
+</html>
